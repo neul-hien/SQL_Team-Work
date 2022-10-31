@@ -32,14 +32,13 @@ CREATE TABLE MATHANG
 (
    MAMH                 VARCHAR(8)                     NOT NULL,
    TENMH                VARCHAR(100)                   NOT NULL,
-   MANCC                VARCHAR(5)                     NOT NULL,
-   MATH                 VARCHAR(5)                    NOT NULL,
+   MANCC                VARCHAR(8)                     NOT NULL,
+   MATH                 VARCHAR(2)                    NOT NULL,
    SOLUONG              NUMERIC(3,0)                   NOT NULL,
    GIAHANG              MONEY                          NOT NULL,
    THONGSOKT            NVARCHAR(300)                  NOT NULL,
    CONSTRAINT PK_MATHANG PRIMARY KEY (MAMH)
 )
-
 GO
 /*==============================================================*/
 /* ADD FORENIGN KEY IN TABLE MATHANG                            */
