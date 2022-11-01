@@ -8,7 +8,7 @@ USE QLBLT;
 CREATE TABLE THUONGHIEU 
 (
    MATH                 VARCHAR(2)                     NOT NULL,
-   TENTH                NVARCHAR(100)                   NOT NULL,
+   TENTH                NVARCHAR(100)                  NOT NULL,
    CONSTRAINT PK_THUONGHIEU PRIMARY KEY(MATH)
 ) 
 GO
@@ -18,8 +18,8 @@ GO
 CREATE TABLE NHACUNGCAP 
 (
    MANCC                VARCHAR(8)                     NOT NULL,
-   TENNCC               NVARCHAR(100)                   NOT NULL,
-   DIACHI               NVARCHAR(200)                   NOT NULL,
+   TENNCC               NVARCHAR(100)                  NOT NULL,
+   DIACHI               NVARCHAR(200)                  NOT NULL,
    DIENTHOAI            VARCHAR(20)                    NOT NULL,
    EMAIL                VARCHAR(50)                    NOT NULL,
    CONSTRAINT PK_NHACUNGCAP PRIMARY KEY(MANCC)
@@ -33,7 +33,7 @@ CREATE TABLE MATHANG
    MAMH                 VARCHAR(8)                     NOT NULL,
    TENMH                VARCHAR(100)                   NOT NULL,
    MANCC                VARCHAR(8)                     NOT NULL,
-   MATH                 VARCHAR(2)                    NOT NULL,
+   MATH                 VARCHAR(2)                     NOT NULL,
    SOLUONG              NUMERIC(3,0)                   NOT NULL,
    GIAHANG              MONEY                          NOT NULL,
    THONGSOKT            NVARCHAR(300)                  NOT NULL,
@@ -56,10 +56,10 @@ ALTER TABLE MATHANG
 CREATE TABLE KHACHHANG 
 (
    MAKH                 VARCHAR(6)                     NOT NULL,
-   HO_DEM               NVARCHAR(100)                   NOT NULL,
+   HO_DEM               NVARCHAR(100)                  NOT NULL,
    TEN                  NVARCHAR(20)                   NOT NULL,
-   GIOITINH             NVARCHAR(5)                     NOT NULL,
-   DIACHIKH             NVARCHAR(200)                   NOT NULL,
+   GIOITINH             NVARCHAR(5)                    NOT NULL,
+   DIACHIKH             NVARCHAR(200)                  NOT NULL,
    DIENTHOAIKH          VARCHAR(20)                    NOT NULL,
    EMAIL                VARCHAR(100)                   NOT NULL,
    CONSTRAINT PK_KHACHHANG PRIMARY KEY (MAKH)
@@ -71,7 +71,7 @@ GO
 CREATE TABLE NHANVIEN 
 (
    MANV                 VARCHAR(6)                     NOT NULL,
-   HO_DEM               NVARCHAR(100)                   NOT NULL,
+   HO_DEM               NVARCHAR(100)                  NOT NULL,
    TEN                  NVARCHAR(20)                   NOT NULL,
    GIOITINH             NVARCHAR(5)                    NOT NULL,
    NGAYSINH             DATE                           NOT NULL,
@@ -79,8 +79,8 @@ CREATE TABLE NHANVIEN
    DIACHI               NVARCHAR(200)                  NOT NULL,
    DIENTHOAINV          VARCHAR(20)                    NULL,
    EMAIL                VARCHAR(100)                   NULL,
-   LUONG_CO_BAN         MONEY						   NOT NULL,
-   PHUCAP               MONEY						   NOT NULL,
+   LUONG_CO_BAN         MONEY			       NOT NULL,
+   PHUCAP               MONEY		               NOT NULL,
    CONSTRAINT PK_NHANVIEN PRIMARY KEY (MANV)
 )
 GO
@@ -94,7 +94,7 @@ CREATE TABLE HOADON
    MAKH                 VARCHAR(6)                     NOT NULL,
    NGAYXUATHD           DATE                           NOT NULL,
    SOLUONG              NUMERIC(3,0)                   NOT NULL,
-   TONGTIEN             MONEY                 NOT NULL,
+   TONGTIEN             MONEY                          NOT NULL,
    CONSTRAINT PK_HOADON PRIMARY KEY (MAHD)
 )
 GO
@@ -181,7 +181,7 @@ ALTER TABLE CHITIETPHIEUNHAP
 CREATE TABLE PHIEUBH 
 (
    MAHD                 VARCHAR(6)                     NOT NULL,
-   MAMH					VARCHAR(8)					   NOT NULL,
+   MAMH			VARCHAR(8)		       NOT NULL,
    NGAYBH               DATE                           NOT NULL,
    LIDOBH               VARCHAR(500)                   NOT NULL,
    NGAYNHANHANG         DATE                           NOT NULL,
@@ -203,7 +203,3 @@ ALTER TABLE PHIEUBH
    ADD CONSTRAINT FK_PHIEUBH_REFERENCE_HOADON FOREIGN KEY (NGAYBH)
       REFERENCES HOADON (NGAYXUATHD);
 */
-/*==============================================================*/
-/* ADD VALUES                                                   */
-/*==============================================================*/
-
